@@ -1,0 +1,150 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(/fonts/Roboto/Roboto-Medium.ttf);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+    background-color: #F5F5F6;
+    letter-spacing: 6%;
+    line-height: 12.89px;
+    font-weight: 500;
+    font-size: 13px;
+    font-family: Roboto;
+}
+
+ul {
+    display: flex;
+    border-radius: 8px;
+    background-color: none;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    position: relative;
+}
+
+ul li {
+    list-style: none;
+    position: relative;
+    z-index: 1;
+}
+
+li:nth-child(1) {
+    width: 90px;
+}
+
+li:nth-child(2) {
+    width: 100px;
+}
+
+li:nth-child(3) {
+    width: 140px;
+}
+
+li:nth-child(4) {
+    width: 140px;
+}
+
+li:nth-child(5) {
+    width: 110px;
+}
+
+li:nth-child(6) {
+    width: 150px;
+}
+
+li:nth-child(7) {
+    width: 150px;
+}
+
+.logo {
+    width: 89px;
+    height: 23px;
+}
+
+.sign-in-btn {
+    width: 65px;
+    height: 45px;
+    color: white;
+    background-color: #ea4c89;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    font-family: Roboto;
+    cursor: pointer;
+    border-radius: 8px;
+
+}
+
+ul li a {
+    text-decoration-line: none;
+    color: black;
+}
+
+.animation {
+    width: 90px;
+    height: 45px;
+    background-color: rgb(58, 255, 255);
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+
+#start-home {
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+}
+
+li:nth-child(1):hover~#start-home {
+    left: 0px;
+    width: 90px;
+}
+
+
+li:nth-child(2):hover~#start-home {
+    left: 90px;
+    width: 100px;
+}
+
+
+li:nth-child(3):hover~#start-home {
+    left: 190px;
+    width: 140px;
+}
+
+
+li:nth-child(4):hover~#start-home {
+    left: 330px;
+    width: 140px;
+
+}
+
+li:nth-child(5):hover~#start-home {
+    left: 470px;
+    width: 110px;
+
+}
+
+
+li:nth-child(6):hover~#start-home {
+    left: 580px;
+    width: 150px;
+
+}
+
+
+li:nth-child(7):hover~#start-home {
+    left: 730px;
+    width: 150px;
+
+
+}
