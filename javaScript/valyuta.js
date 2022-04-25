@@ -1,28 +1,23 @@
-const getExchangeButtons = document.querySelectorAll('.aviable-btn');
-getExchangeButtons.forEach(element => {
-    element.addEventListener('click', () => {
-        clearAviableColor();
-        element.style.background = 'blueviolet';
-        element.style.color = 'white';
-    })
-});
-const getSellButtons = document.querySelectorAll('.sell-btn');
-getSellButtons.forEach(element => {
-    element.addEventListener('click', () => {
-        clearSellColor();
-        element.style.background = 'blueviolet';
-        element.style.color = 'white';
-    })
-});
-function clearAviableColor() {
-    getExchangeButtons.forEach(element => {
-        element.style.background = 'none';
-        element.style.color = 'black';
+
+let tableLeftBtn1 = document.querySelectorAll('.aviable-btn');
+for (let i = 0; i < tableLeftBtn1.length; i++) {
+    tableLeftBtn1[i].addEventListener('click', () => {
+        tableLeftBtn1.forEach(element => {
+            element.classList.remove('active_btn');
+        })
+        tableLeftBtn1[i].classList.add('active_btn');
     })
 }
-function clearSellColor() {
-    getSellButtons.forEach(element => {
-        element.style.background = 'none';
-        element.style.color = 'black';
+let tableLeftBtn2 = document.querySelectorAll('.sell-btn');
+for (let j = 0; j < tableLeftBtn2.length; j++) {
+    tableLeftBtn2[j].addEventListener('click', () => {
+        tableLeftBtn2.forEach(element => {
+            element.classList.remove('active_btn');
+        })
+        tableLeftBtn2[j].classList.add('active_btn');
     })
 }
+
+
+//  Api hissenin yazilmasi
+fetch('')

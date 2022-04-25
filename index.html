@@ -47,10 +47,10 @@
         <div class="row">
             <div class="col-3">
                 <div class="money-list">
-                    <table>
+                    <table class="table1">
                         <caption>У меня есть </caption>
                         <tr>
-                            <td><button class="aviable-btn">RUB</button></td>
+                            <td><button class="aviable-btn active_btn">RUB</button></td>
                             <td><button class="aviable-btn">USD</button></td>
                             <td><button class="aviable-btn">EUR</button></td>
                             <td><button class="aviable-btn">GBP</button></td>
@@ -58,24 +58,28 @@
                     </table>
                 </div>
                 <div class="show-value">
-
+                    <input type="number" name="import" min="1">
+                    <span class="convert">1 RUB = 0.0135 USD</span>
                 </div>
 
 
             </div>
             <div class="col-3">
                 <div class="money-list">
-                    <table>
+                    <table class="table2">
                         <caption>Хочу приобрести </caption>
                         <tr>
                             <td><button class="sell-btn">RUB</button></td>
-                            <td><button class="sell-btn">USD</button></td>
+                            <td><button class="sell-btn active_btn">USD</button></td>
                             <td><button class="sell-btn">EUR</button></td>
                             <td><button class="sell-btn">GBP</button></td>
                         </tr>
                     </table>
                 </div>
-                <div class="show-value"></div>
+                <div class="show-value">
+                    <input type="number" name="import" min="1">
+                    <span class="convert">1 USD = 73.8896 RUB</span>
+                </div>
 
             </div>
         </div>
