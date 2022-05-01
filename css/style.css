@@ -24,6 +24,7 @@
     width: calc(100%/12*8);
 }
 
+
 .menu {
     display: flex;
     align-items: center;
@@ -271,6 +272,231 @@ input[type=number] {
     size: 12px;
 }
 
-/* responsive design begin */
-/* @media screen and (max-width:1200px) {
-} */
+
+@media screen and (max-width:1200px)
+  {
+      .menu{
+        letter-spacing: 5%;
+        line-height: 10px;
+        font-weight: 400;
+        font-size: 11px;
+        margin-bottom: 50px;
+        height: 75px;
+      }
+      ul{
+        line-height: 40px;
+      }
+      li:nth-child(1) {
+        width: 75px;
+    }
+    
+    li:nth-child(2) {
+        width: 85px;
+    }
+    
+    li:nth-child(3) {
+        width: 125px;
+    }
+    
+    li:nth-child(4) {
+        width: 125px;
+    }
+    
+    li:nth-child(5) {
+        width: 95px;
+    }
+    
+    li:nth-child(6) {
+        width: 135px;
+    }
+    
+    li:nth-child(7) {
+        width: 135px;
+    }
+    
+    .animation {
+        width: 75px;
+    }
+    
+    li:nth-child(1):hover~#start-home {
+        left: 0px;
+        width: 75px;
+    }
+    
+    
+    li:nth-child(2):hover~#start-home {
+        left: 75px;
+        width: 85px;
+    }
+    
+    
+    li:nth-child(3):hover~#start-home {
+        left: 160px;
+        width: 125px;
+    }
+    
+    
+    li:nth-child(4):hover~#start-home {
+        left: 285px;
+        width: 125px;
+    
+    }
+    
+    li:nth-child(5):hover~#start-home {
+        left: 410px;
+        width: 95px;
+    
+    }
+    
+    
+    li:nth-child(6):hover~#start-home {
+        left: 505px;
+        width: 135px;
+    
+    }
+    
+    
+    li:nth-child(7):hover~#start-home {
+        left: 640px;
+        width: 135px;
+    
+    
+    }
+    
+    .logo {
+        width: 75px;
+        height: 20px;
+    }
+    
+    .sign-in-btn {
+        width: 55px;
+        height: 40px;
+        font-size: 11px;
+    
+    }
+    .convert-show {
+        line-height: 40px;
+        font-size: 27px;
+    }
+  }
+@media  screen and (max-width:992px) {
+    .menu{
+        letter-spacing: 4%;
+        font-size: 10px;
+        height: 60px;
+      }
+      
+      .col-3{
+          width: calc(100%/12*4);
+      }
+      .col-8{
+          width: calc(100%/12*9);
+      }
+      ul{
+        height: 35px;
+    }
+      li:nth-child(1) {
+        width: 65px;
+    }
+    
+    li:nth-child(2) {
+        width: 75px;
+    }
+    
+    li:nth-child(3) {
+        width: 115px;
+    }
+    
+    li:nth-child(4) {
+        width: 115px;
+    }
+    
+    li:nth-child(5) {
+        width: 80px;
+    }
+    
+    li:nth-child(6) {
+        width: 120px;
+    }
+    
+    li:nth-child(7) {
+        width: 120px;
+    }
+    
+    .animation {
+        width: 60px;
+         line-height: 30px;
+        height: 35px;
+    }
+    
+    li:nth-child(1):hover~#start-home {
+        left: 0px;
+        width: 65px;
+    }
+    
+    
+    li:nth-child(2):hover~#start-home {
+        left: 65px;
+        width: 75px;
+    }
+    
+    
+    li:nth-child(3):hover~#start-home {
+        left: 140px;
+        width: 115px;
+    }
+    
+    
+    li:nth-child(4):hover~#start-home {
+        left: 255px;
+        width: 115px;
+    
+    }
+    
+    li:nth-child(5):hover~#start-home {
+        left: 370px;
+        width: 80px;
+    
+    }
+    
+    
+    li:nth-child(6):hover~#start-home {
+        left: 450px;
+        width: 120px;
+    
+    }
+    
+    
+    li:nth-child(7):hover~#start-home {
+        left: 570px;
+        width: 120px;
+    
+    
+    }
+    
+    .logo {
+            width: 8%;
+            height: 15px;
+            margin: 0px 10px;
+    }
+    .logo img{ 
+            width: 100%;
+    }
+    
+    .sign-in-btn {
+        width: 60px;
+        font-size: 10px;
+        height: 35px;
+    
+    }
+    .convert-show {
+        line-height: 35px;
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:767px)  {
+
+}
+@media screen and (max-width: 586px){
+
+}
