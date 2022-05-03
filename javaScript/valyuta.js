@@ -8,6 +8,9 @@ let getAddInputValue;
 let tableLeftBtn = document.querySelectorAll('.aviable-btn');
 var convertLeft = document.querySelector('.convert-left');
 var convertRight = document.querySelector('.convert-right');
+let getMenuIcon=document.querySelector('.menu-icon');
+let getCountainerClick=document.querySelector('.containerClick');
+let getMenuMobile=document.querySelector('.menu-mobile');
 
 
 // get inputs value
@@ -48,29 +51,29 @@ async function getData(url) {
     convertRight.innerText = `1 ${rightBtnId} = ${(values[0]).toFixed(4)} ${leftBtnId}`;
     
     //#region  input valuesinin sifirlanmasi button deyisdikde ona uygun valu-larin
-    if(getRightInputValue.value===''){
-        getLeftInputValue.value=" ";
-    }
-    else{
-        if(rightBtnId==leftBtnId){
-            getRightInputValue.value=getLeftInputValue.value;
-        }else{
-            getLeftInputValue.value=(Number(getRightInputValue.value)*values[0]).toFixed(4);
-            getRightInputValue=getRightInputValue;
-        }
-    }
-   //#endregion
+//     if(getRightInputValue.value===''){
+//         getLeftInputValue.value=" ";
+//     }
+//     else{
+//         if(rightBtnId==leftBtnId){
+//             getRightInputValue.value=getLeftInputValue.value;
+//         }else{
+//             getLeftInputValue.value=(Number(getRightInputValue.value)*values[0]).toFixed(4);
+//             getRightInputValue=getRightInputValue;
+//         }
+//     }
+//    //#endregion
 
-   //#region  inputa deyer daxil edildikde valuenin hesablanmasi
-    getRightInputValue.addEventListener('input',()=>{
-        if(getRightInputValue.value===''){
-            getLeftInputValue.value=" ";
-        }
-        else{
-            getLeftInputValue.value=(Number(getRightInputValue.value)*values[0]).toFixed(4);
-        }
+//    //#region  inputa deyer daxil edildikde valuenin hesablanmasi
+//     getRightInputValue.addEventListener('input',()=>{
+//         if(getRightInputValue.value===''){
+//             getLeftInputValue.value=" ";
+//         }
+//         else{
+//             getLeftInputValue.value=(Number(getRightInputValue.value)*values[0]).toFixed(4);
+//         }
        
-    })
+//     })
     //#endregion
 
 
@@ -86,10 +89,11 @@ async function getData(url) {
         }
         else{
             if(leftBtnId===rightBtnId){
-                getLeftInputValue.value=getRightInputValue.value;
-            }else{
-                 getRightInputValue.value=(Number(getLeftInputValue.value)*values[0]).toFixed(4);
+                getRightInputValue.value=getLeftInputValue.value
             }
+            else{
+                 getRightInputValue.value=(Number(getLeftInputValue.value)*values[0]).toFixed(4);
+         }
         }
        //#endregion
 
@@ -99,7 +103,6 @@ async function getData(url) {
                 getRightInputValue.value=" ";
             }
             else{
-                getLeftInputValue=getLeftInputValue;
                 getRightInputValue.value=(Number(getLeftInputValue.value)*values[0]).toFixed(4);
             }   
         })
@@ -111,3 +114,21 @@ getData(`https://api.exchangerate.host/latest?base=${rightBtnId}&symbols=${leftB
 
 
 
+//#region  responsive for mobile
+function myFunction(x) {
+    x.classList.toggle("change");
+  }
+let key=0;
+getCountainerClick.addEventListener('click',()=>{
+   if(key===0){
+    getMenuMobile.classList.add('rotateY');
+    key=1;
+   }
+   else{
+       getMenuMobile.classList.remove('rotateY');
+       key=0
+   }
+    myFunction(getCountainerClick);
+})
+
+//#endregion
